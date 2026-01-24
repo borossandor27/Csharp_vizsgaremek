@@ -1,0 +1,452 @@
+[
+  {
+    "id": 1,
+    "Aktiv": false,
+    "Belepes": "Nov 11, 2013 12:59 AM",
+    "Fizetes": 1177672,
+    "Kilepes": "Feb 20, 2011 12:39 PM",
+    "Beosztas": "Fraud Investigator",
+    "Teljes_nev": "Willey Loache"
+  },
+  {
+    "id": 2,
+    "Aktiv": false,
+    "Belepes": "May 24, 2011 10:07 PM",
+    "Fizetes": 945923,
+    "Kilepes": "Aug 29, 1990 7:12 AM",
+    "Beosztas": "DevOps Engineer",
+    "Teljes_nev": "Trixy Veare"
+  },
+  {
+    "id": 3,
+    "Aktiv": false,
+    "Belepes": "Apr 22, 2017 11:42 PM",
+    "Fizetes": 995625,
+    "Kilepes": "Jan 8, 2011 8:03 AM",
+    "Beosztas": "Founder",
+    "Teljes_nev": "Florida McCardle"
+  },
+  {
+    "id": 4,
+    "Aktiv": false,
+    "Belepes": "Oct 16, 2012 2:44 PM",
+    "Fizetes": 986651,
+    "Kilepes": "Dec 5, 2016 5:58 AM",
+    "Beosztas": "Support Specialist",
+    "Teljes_nev": "Konstanze Vanin"
+  },
+  {
+    "id": 5,
+    "Aktiv": true,
+    "Belepes": "Jan 26, 2012 8:34 AM",
+    "Fizetes": 825447,
+    "Kilepes": "Jan 2, 2001 11:03 PM",
+    "Beosztas": "Customer Support Team Lead",
+    "Teljes_nev": "Carter Moakes"
+  },
+  {
+    "id": 6,
+    "Aktiv": false,
+    "Belepes": "Feb 9, 2015 3:04 AM",
+    "Fizetes": 695143,
+    "Kilepes": "Mar 27, 1971 8:02 AM",
+    "Beosztas": "Solutions Architect",
+    "Teljes_nev": "Booth Warbrick"
+  },
+  {
+    "id": 7,
+    "Aktiv": true,
+    "Belepes": "Oct 25, 2017 10:42 AM",
+    "Fizetes": 1415077,
+    "Kilepes": "Jul 23, 2012 10:14 PM",
+    "Beosztas": "Infrastructure Engineer",
+    "Teljes_nev": "Gun Kildea"
+  },
+  {
+    "id": 8,
+    "Aktiv": true,
+    "Belepes": "Oct 25, 2019 11:22 PM",
+    "Fizetes": 1036969,
+    "Kilepes": "Jul 27, 1992 9:40 PM",
+    "Beosztas": "IT Manager",
+    "Teljes_nev": "Briant Davidi"
+  },
+  {
+    "id": 9,
+    "Aktiv": false,
+    "Belepes": "Jun 2, 2012 7:51 AM",
+    "Fizetes": 1048025,
+    "Kilepes": "Mar 7, 1974 6:53 AM",
+    "Beosztas": "Internal Tools Lead",
+    "Teljes_nev": "Filmer Morling"
+  },
+  {
+    "id": 10,
+    "Aktiv": false,
+    "Belepes": "Nov 5, 2017 11:48 PM",
+    "Fizetes": 1138251,
+    "Kilepes": "Apr 4, 1970 7:03 AM",
+    "Beosztas": "Support Specialist",
+    "Teljes_nev": "Gun Biggin"
+  },
+  {
+    "id": 11,
+    "Aktiv": false,
+    "Belepes": "Sep 30, 2017 6:57 PM",
+    "Fizetes": 1011556,
+    "Kilepes": "Mar 6, 1977 2:09 PM",
+    "Beosztas": "Outbound BDR",
+    "Teljes_nev": "Ryann Ovens"
+  },
+  {
+    "id": 12,
+    "Aktiv": true,
+    "Belepes": "Apr 23, 2017 8:52 PM",
+    "Fizetes": 1062593,
+    "Kilepes": "Mar 19, 2016 1:05 AM",
+    "Beosztas": "Support Specialist",
+    "Teljes_nev": "Bailie West-Frimley"
+  },
+  {
+    "id": 13,
+    "Aktiv": true,
+    "Belepes": "Jan 6, 2017 3:57 AM",
+    "Fizetes": 1235870,
+    "Kilepes": "Jun 15, 1996 1:18 AM",
+    "Beosztas": "Database Manager",
+    "Teljes_nev": "Jillana Fissenden"
+  },
+  {
+    "id": 14,
+    "Aktiv": false,
+    "Belepes": "Apr 28, 2012 11:59 PM",
+    "Fizetes": 1095224,
+    "Kilepes": "Sep 19, 1992 9:04 PM",
+    "Beosztas": "Infrastructure Engineer",
+    "Teljes_nev": "Daniele Whitsey"
+  },
+  {
+    "id": 15,
+    "Aktiv": true,
+    "Belepes": "Feb 8, 2015 8:01 AM",
+    "Fizetes": 655146,
+    "Kilepes": "Apr 6, 2024 5:40 AM",
+    "Beosztas": "Inbound BDR",
+    "Teljes_nev": "Katuscha Foat"
+  },
+  {
+    "id": 16,
+    "Aktiv": true,
+    "Belepes": "May 11, 2014 9:52 AM",
+    "Fizetes": 545394,
+    "Kilepes": "Nov 14, 1980 12:27 AM",
+    "Beosztas": "Product Manager",
+    "Teljes_nev": "Diannne Gristock"
+  },
+  {
+    "id": 17,
+    "Aktiv": true,
+    "Belepes": "May 16, 2012 12:37 AM",
+    "Fizetes": 758947,
+    "Kilepes": "Nov 30, 1998 4:18 AM",
+    "Beosztas": "Outbound BDR",
+    "Teljes_nev": "Jennilee Lavall"
+  },
+  {
+    "id": 18,
+    "Aktiv": true,
+    "Belepes": "Apr 15, 2017 3:29 AM",
+    "Fizetes": 1392034,
+    "Kilepes": "Jan 2, 1985 5:50 PM",
+    "Beosztas": "Product Manager",
+    "Teljes_nev": "Auria Abdee"
+  },
+  {
+    "id": 19,
+    "Aktiv": true,
+    "Belepes": "Dec 31, 2014 2:01 AM",
+    "Fizetes": 671771,
+    "Kilepes": "Jun 20, 1996 5:53 PM",
+    "Beosztas": "Fullstack Engineer",
+    "Teljes_nev": "Fawne Kaminski"
+  },
+  {
+    "id": 20,
+    "Aktiv": true,
+    "Belepes": "Mar 24, 2013 3:45 PM",
+    "Fizetes": 1491016,
+    "Kilepes": "Dec 30, 1974 4:55 PM",
+    "Beosztas": "Infrastructure Engineer",
+    "Teljes_nev": "Elmira Lenton"
+  },
+  {
+    "id": 21,
+    "Aktiv": true,
+    "Belepes": "Dec 1, 2018 11:08 PM",
+    "Fizetes": 629540,
+    "Kilepes": "Apr 21, 2007 11:42 AM",
+    "Beosztas": "Solutions Architect",
+    "Teljes_nev": "Gilda Spata"
+  },
+  {
+    "id": 22,
+    "Aktiv": true,
+    "Belepes": "Mar 13, 2019 11:38 PM",
+    "Fizetes": 1275162,
+    "Kilepes": "Aug 19, 2014 12:29 AM",
+    "Beosztas": "CMO",
+    "Teljes_nev": "Daniele Upward"
+  },
+  {
+    "id": 23,
+    "Aktiv": true,
+    "Belepes": "Aug 28, 2012 10:57 PM",
+    "Fizetes": 740782,
+    "Kilepes": "Mar 20, 2020 10:27 AM",
+    "Beosztas": "Sales Engineer",
+    "Teljes_nev": "Bailie Ducker"
+  },
+  {
+    "id": 24,
+    "Aktiv": false,
+    "Belepes": "May 12, 2016 11:39 AM",
+    "Fizetes": 840178,
+    "Kilepes": "Feb 26, 1990 4:59 PM",
+    "Beosztas": "Database Manager",
+    "Teljes_nev": "Allyn Rogeon"
+  },
+  {
+    "id": 25,
+    "Aktiv": true,
+    "Belepes": "Jan 26, 2016 9:59 AM",
+    "Fizetes": 1277889,
+    "Kilepes": "Dec 2, 1979 11:48 AM",
+    "Beosztas": "Data Analyst",
+    "Teljes_nev": "Carter Manketell"
+  },
+  {
+    "id": 26,
+    "Aktiv": true,
+    "Belepes": "Oct 22, 2019 7:59 PM",
+    "Fizetes": 1035565,
+    "Kilepes": "Sep 21, 1989 8:54 AM",
+    "Beosztas": "Content Moderator",
+    "Teljes_nev": "Annadiana Albin"
+  },
+  {
+    "id": 27,
+    "Aktiv": true,
+    "Belepes": "Nov 26, 2012 7:42 AM",
+    "Fizetes": 1277180,
+    "Kilepes": "Nov 24, 1993 8:30 PM",
+    "Beosztas": "Account Executive",
+    "Teljes_nev": "Sela Docherty"
+  },
+  {
+    "id": 28,
+    "Aktiv": false,
+    "Belepes": "Jan 10, 2012 4:03 PM",
+    "Fizetes": 916905,
+    "Kilepes": "Oct 11, 2016 1:28 AM",
+    "Beosztas": "Infrastructure Engineer",
+    "Teljes_nev": "Carney Hamsley"
+  },
+  {
+    "id": 29,
+    "Aktiv": true,
+    "Belepes": "Jun 25, 2017 4:26 AM",
+    "Fizetes": 1246695,
+    "Kilepes": "Mar 16, 2022 4:11 PM",
+    "Beosztas": "CMO",
+    "Teljes_nev": "Dave Hemerijk"
+  },
+  {
+    "id": 30,
+    "Aktiv": true,
+    "Belepes": "Jun 3, 2018 5:41 AM",
+    "Fizetes": 1173785,
+    "Kilepes": "Feb 24, 2013 2:39 AM",
+    "Beosztas": "CTO",
+    "Teljes_nev": "Annadiana Hemerijk"
+  },
+  {
+    "id": 31,
+    "Aktiv": false,
+    "Belepes": "Jul 14, 2013 1:58 AM",
+    "Fizetes": 599586,
+    "Kilepes": "Aug 22, 1975 8:15 AM",
+    "Beosztas": "Fraud Investigator",
+    "Teljes_nev": "Christoph Bonass"
+  },
+  {
+    "id": 32,
+    "Aktiv": true,
+    "Belepes": "Oct 15, 2012 5:29 AM",
+    "Fizetes": 926078,
+    "Kilepes": "Nov 29, 1992 3:35 AM",
+    "Beosztas": "Co-Founder",
+    "Teljes_nev": "Harmony Devanny"
+  },
+  {
+    "id": 33,
+    "Aktiv": true,
+    "Belepes": "Feb 11, 2011 5:56 PM",
+    "Fizetes": 909858,
+    "Kilepes": "Jan 19, 2016 3:00 PM",
+    "Beosztas": "CTO",
+    "Teljes_nev": "Maurise Boddam"
+  },
+  {
+    "id": 34,
+    "Aktiv": true,
+    "Belepes": "Feb 22, 2013 5:54 PM",
+    "Fizetes": 534058,
+    "Kilepes": "Mar 11, 2001 2:41 AM",
+    "Beosztas": "Sales Team Lead",
+    "Teljes_nev": "Ernesto Corssen"
+  },
+  {
+    "id": 35,
+    "Aktiv": true,
+    "Belepes": "Feb 4, 2016 12:08 PM",
+    "Fizetes": 975577,
+    "Kilepes": "Mar 1, 2023 8:59 PM",
+    "Beosztas": "Sales Engineer",
+    "Teljes_nev": "Tyson Schafer"
+  },
+  {
+    "id": 36,
+    "Aktiv": true,
+    "Belepes": "Aug 29, 2013 8:13 AM",
+    "Fizetes": 558119,
+    "Kilepes": "Jul 13, 2020 1:34 PM",
+    "Beosztas": "Inbound SDR",
+    "Teljes_nev": "Traver Rubery"
+  },
+  {
+    "id": 37,
+    "Aktiv": false,
+    "Belepes": "Feb 2, 2017 5:14 AM",
+    "Fizetes": 920240,
+    "Kilepes": "Mar 27, 1976 2:41 AM",
+    "Beosztas": "Product Manager",
+    "Teljes_nev": "Adelind Gwillim"
+  },
+  {
+    "id": 38,
+    "Aktiv": true,
+    "Belepes": "Apr 28, 2010 2:11 PM",
+    "Fizetes": 1364471,
+    "Kilepes": "May 7, 2022 4:00 AM",
+    "Beosztas": "Content Moderator",
+    "Teljes_nev": "Phylis Devanny"
+  },
+  {
+    "id": 39,
+    "Aktiv": true,
+    "Belepes": "Oct 26, 2011 12:02 PM",
+    "Fizetes": 1045973,
+    "Kilepes": "Dec 27, 1977 1:14 AM",
+    "Beosztas": "Product Manager",
+    "Teljes_nev": "Tersina Cutler"
+  },
+  {
+    "id": 40,
+    "Aktiv": true,
+    "Belepes": "Jun 2, 2018 2:25 AM",
+    "Fizetes": 897087,
+    "Kilepes": "Aug 26, 2010 8:21 PM",
+    "Beosztas": "Backend Engineer",
+    "Teljes_nev": "Almeda Roebottom"
+  },
+  {
+    "id": 41,
+    "Aktiv": false,
+    "Belepes": "Jun 2, 2018 11:37 AM",
+    "Fizetes": 1347802,
+    "Kilepes": "Aug 1, 2009 1:46 PM",
+    "Beosztas": "Customer Support Team Lead",
+    "Teljes_nev": "Adelind Slides"
+  },
+  {
+    "id": 42,
+    "Aktiv": false,
+    "Belepes": "May 7, 2014 9:43 PM",
+    "Fizetes": 849259,
+    "Kilepes": "Oct 13, 1981 11:01 PM",
+    "Beosztas": "Product Marketing Specialist",
+    "Teljes_nev": "Sondra Keitley"
+  },
+  {
+    "id": 43,
+    "Aktiv": false,
+    "Belepes": "Jun 25, 2015 2:59 PM",
+    "Fizetes": 834846,
+    "Kilepes": "Nov 18, 1977 7:39 AM",
+    "Beosztas": "Accountant",
+    "Teljes_nev": "Gay McDiarmid"
+  },
+  {
+    "id": 44,
+    "Aktiv": true,
+    "Belepes": "Jun 29, 2019 1:06 AM",
+    "Fizetes": 672340,
+    "Kilepes": "Mar 20, 1979 6:34 PM",
+    "Beosztas": "Accountant",
+    "Teljes_nev": "Gilda Kiddey"
+  },
+  {
+    "id": 45,
+    "Aktiv": false,
+    "Belepes": "May 27, 2014 6:47 PM",
+    "Fizetes": 1221865,
+    "Kilepes": "Sep 24, 1989 11:27 AM",
+    "Beosztas": "Inbound BDR",
+    "Teljes_nev": "Traver Halsted"
+  },
+  {
+    "id": 46,
+    "Aktiv": false,
+    "Belepes": "Jun 28, 2017 8:56 AM",
+    "Fizetes": 1398145,
+    "Kilepes": "Apr 17, 2007 6:52 PM",
+    "Beosztas": "Inbound BDR",
+    "Teljes_nev": "Valerye Haighton"
+  },
+  {
+    "id": 47,
+    "Aktiv": true,
+    "Belepes": "Jun 2, 2014 1:38 AM",
+    "Fizetes": 1145757,
+    "Kilepes": "Oct 20, 2004 3:47 AM",
+    "Beosztas": "CFO",
+    "Teljes_nev": "Konstanze Banger"
+  },
+  {
+    "id": 48,
+    "Aktiv": false,
+    "Belepes": "Oct 15, 2013 11:07 AM",
+    "Fizetes": 1476398,
+    "Kilepes": "Jan 15, 2017 9:55 PM",
+    "Beosztas": "Business Analyst",
+    "Teljes_nev": "Matthew Weatherburn"
+  },
+  {
+    "id": 49,
+    "Aktiv": true,
+    "Belepes": "Aug 17, 2018 6:32 PM",
+    "Fizetes": 595166,
+    "Kilepes": "Jan 21, 1972 1:09 PM",
+    "Beosztas": "CMO",
+    "Teljes_nev": "Augusta Estick"
+  },
+  {
+    "id": 50,
+    "Aktiv": true,
+    "Belepes": "May 6, 2016 3:28 AM",
+    "Fizetes": 854095,
+    "Kilepes": "Nov 18, 1991 9:52 AM",
+    "Beosztas": "DevOps Engineer",
+    "Teljes_nev": "Phillipp Codner"
+  }
+]
