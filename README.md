@@ -21,3 +21,22 @@ Nagyon sok online szolgáltató elkészíti nekünk. pl. a https://app.quicktype
 - POST
 - PUT
 - DELETE
+
+## .NETFramewor
+
+### Konzolos
+
+### WinForm
+
+### WPF 
+
+## .NET
+
+### Konzolos
+
+### WinForm
+
+### WPF 
+
+## REST API adatelérési osztály
+
