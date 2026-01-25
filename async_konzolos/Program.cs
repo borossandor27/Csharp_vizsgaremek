@@ -22,6 +22,10 @@ namespace async_konzolos_framework47
             try
             {
                 dolgozok = await ReadAllAsync();
+                //foreach (var item in dolgozok)
+                //{
+                //    Console.WriteLine(item.ToString());
+                //}
 
                 int id = 3;
                 Dolgozo dolgozo = await ReadIdAsync(id);

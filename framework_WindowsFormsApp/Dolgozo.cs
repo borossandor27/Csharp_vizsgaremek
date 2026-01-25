@@ -6,7 +6,7 @@
 //
 //    var dolgozo = Dolgozo.FromJson(jsonString);
 
-namespace async_konzolos_framework47
+namespace framework_WindowsFormsApp
 {
     using System;
     using System.Collections.Generic;
@@ -37,6 +37,10 @@ namespace async_konzolos_framework47
 
         [JsonProperty("Teljes_nev")]
         public string TeljesNev { get; set; }
+
+        public string ImageUrl { get; set; }    
+
+
         override public string ToString()
         {
             return $"ID: {Id}, Név: {TeljesNev}, Beosztás: {Beosztas}, Belépés: {Belepes}, Kilépés: {Kilepes ?? "N/A"}, Fizetés: {Fizetes}, Aktív: {Aktiv}";
@@ -45,12 +49,12 @@ namespace async_konzolos_framework47
 
     public partial class Dolgozo
     {
-        public static Dolgozo[] FromJson(string json) => JsonConvert.DeserializeObject<Dolgozo[]>(json, async_konzolos_framework47.Converter.Settings);
+        public static Dolgozo[] FromJson(string json) => JsonConvert.DeserializeObject<Dolgozo[]>(json, framework_WindowsFormsApp.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Dolgozo[] self) => JsonConvert.SerializeObject(self, async_konzolos_framework47.Converter.Settings);
+        public static string ToJson(this Dolgozo[] self) => JsonConvert.SerializeObject(self, framework_WindowsFormsApp.Converter.Settings);
     }
 
     internal static class Converter
