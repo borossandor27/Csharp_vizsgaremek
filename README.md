@@ -33,6 +33,8 @@ hogy rugalmasan hesználni tudjuk. Nagyon sok online szolgáltató elkészíti n
 
 ### WPF 
 
+### REST API adatelérési osztály
+
 ## .NET
 
 ### Konzolos
@@ -41,5 +43,5 @@ hogy rugalmasan hesználni tudjuk. Nagyon sok online szolgáltató elkészíti n
 
 ### WPF 
 
-## REST API adatelérési osztály
+### REST API adatelérési osztály
 

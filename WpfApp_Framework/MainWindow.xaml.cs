@@ -1,28 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using WpfApp_Framework.Models;
+using System.Collections.ObjectModel;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Configuration;
 
 namespace WpfApp_Framework
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
+        static readonly string apiUrl = ConfigurationManager.AppSettings["RestApiBaseUrl"];
+        static HttpClient _httpClient = new HttpClient();
+
+        public ObservableCollection<Dolgozo> Dolgozok { get; }
+        = new ObservableCollection<Dolgozo>();
+
+        public Dolgozo SelectedDolgozo { get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = this;
         }
+
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            await GetAllFromBackend();
+        }
+
+        async Task GetAllFromBackend()
+        {
+            var json = await _httpClient.GetStringAsync(apiUrl);
+            var lista = Dolgozo.FromJson(json);
+
+            Dolgozok.Clear();
+            foreach (var d in lista)
+            {
+                d.ImageUrl = $"https://randomuser.me/api/portraits/men/{d.Id % 100}.jpg";
+                Dolgozok.Add(d);
+            }
+        }
+
     }
 }

@@ -1,5 +1,7 @@
 <Solution>
   <Folder Name="/Solution Items/">
+    <File Path="backend_base.url" />
+    <File Path="random_image.url" />
     <File Path="README.md" />
   </Folder>
   <Project Path="async_konzolos/framework_async_konzolos.csproj" Id="058c92bf-4883-4fb9-a118-77cdaeae96b7" />

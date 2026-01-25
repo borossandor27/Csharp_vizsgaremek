@@ -6,7 +6,7 @@
 //
 //    var dolgozo = Dolgozo.FromJson(jsonString);
 
-namespace framework_WindowsFormsApp
+namespace WpfApp_Framework.Models
 {
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
@@ -81,10 +81,10 @@ namespace framework_WindowsFormsApp
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
         private string _imageUrl;
-        public string ImageUrl 
-        { 
-            get => _imageUrl; 
-            set{ _imageUrl = value; OnPropertyChanged(); }
+        public string ImageUrl
+        {
+            get => _imageUrl;
+            set { _imageUrl = value; OnPropertyChanged(); }
         }
         public DateTime? BelepesDate
         {
@@ -115,12 +115,12 @@ namespace framework_WindowsFormsApp
 
     public partial class Dolgozo
     {
-        public static Dolgozo[] FromJson(string json) => JsonConvert.DeserializeObject<Dolgozo[]>(json, framework_WindowsFormsApp.Converter.Settings);
+        public static Dolgozo[] FromJson(string json) => JsonConvert.DeserializeObject<Dolgozo[]>(json, WpfApp_Framework.Models.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Dolgozo[] self) => JsonConvert.SerializeObject(self, framework_WindowsFormsApp.Converter.Settings);
+        public static string ToJson(this Dolgozo[] self) => JsonConvert.SerializeObject(self, WpfApp_Framework.Models.Converter.Settings);
     }
 
     internal static class Converter
