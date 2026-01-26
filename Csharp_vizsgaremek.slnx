@@ -5,6 +5,7 @@
     <File Path="README.md" />
   </Folder>
   <Project Path="async_konzolos/framework_async_konzolos.csproj" Id="058c92bf-4883-4fb9-a118-77cdaeae96b7" />
+  <Project Path="core_konzolos/core_konzolos.csproj" Id="a8fac05d-a51d-4279-b08c-a764bb05ef77" DisplayName="Core_konzolos" />
   <Project Path="framework_WindowsFormsApp/framework_WindowsFormsApp.csproj" Id="6b2a2452-1cf4-4e24-9b93-d5ece39582ab" />
   <Project Path="WpfApp_Framework/WpfApp_Framework.csproj" Id="07e7b2b2-85ee-41c9-9d9d-2a081744b910" />
 </Solution>
