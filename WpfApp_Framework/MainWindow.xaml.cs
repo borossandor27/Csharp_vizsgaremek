@@ -1,9 +1,10 @@
-﻿using WpfApp_Framework.Models;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
+using System.Configuration;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Configuration;
+using WpfApp_Framework.Models;
+using WpfApp_Framework.ViewModels;
 
 namespace WpfApp_Framework
 {
@@ -20,7 +21,7 @@ namespace WpfApp_Framework
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = this;
+            DataContext = new MainViewModel();
         }
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)

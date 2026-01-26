@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using framework_WindowsFormsApp.Services;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,12 +16,10 @@ namespace framework_WindowsFormsApp
 {
     public partial class Form_Main : Form
     {
-        static readonly string apiUrl = ConfigurationManager.AppSettings["RestApiBaseUrl"] ?? "https://retoolapi.dev/t0j7gq/dolgozok"; // A backend API URL-je
-        static HttpClient _httpClient = new HttpClient(); 
         public readonly string ImageUrl = $"https://randomuser.me/api/portraits/men/"; // Minden dolgozóhoz random képet adunk 'ImageUrl+{id}.jpg'
         BindingList<Dolgozo> _dolgozok = new BindingList<Dolgozo>();
         BindingSource _bsDolgozok = new BindingSource();
-
+        DolgozoApiService _api = new DolgozoApiService();
 
         public Form_Main()
         {
@@ -58,9 +57,7 @@ namespace framework_WindowsFormsApp
 
         async Task getAll_from_backend()
         {
-            var lista = Dolgozo.FromJson(
-                await _httpClient.GetStringAsync(apiUrl)
-            );
+            var lista = await _api.GetAllAsync();
 
             _dolgozok.Clear();
             foreach (var d in lista)
@@ -69,6 +66,7 @@ namespace framework_WindowsFormsApp
                 _dolgozok.Add(d);
             }
         }
+
 
         private void listBox_dolgozok_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -96,12 +94,7 @@ namespace framework_WindowsFormsApp
         {
             var ujDolgozo = GetDolgozoFromForm();
 
-            var json = JsonConvert.SerializeObject(ujDolgozo);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-            var response = await _httpClient.PostAsync(apiUrl, content);
-
-            if (response.IsSuccessStatusCode)
+            if (await _api.InsertAsync(ujDolgozo))
             {
                 await getAll_from_backend();
                 MessageBox.Show("Dolgozó sikeresen hozzáadva");
@@ -111,6 +104,7 @@ namespace framework_WindowsFormsApp
                 MessageBox.Show("Hiba történt beszúráskor");
             }
         }
+
 
 
         async void button_getAll_Click(object sender, EventArgs e)
@@ -124,15 +118,7 @@ namespace framework_WindowsFormsApp
 
             var dolgozo = GetDolgozoFromForm();
 
-            var json = JsonConvert.SerializeObject(dolgozo);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
-
-            var response = await _httpClient.PutAsync(
-                $"{apiUrl}/{dolgozo.Id}",
-                content
-            );
-
-            if (response.IsSuccessStatusCode)
+            if (await _api.UpdateAsync(dolgozo))
             {
                 await getAll_from_backend();
                 MessageBox.Show("Dolgozó frissítve");
@@ -144,26 +130,21 @@ namespace framework_WindowsFormsApp
         }
 
 
+
         async void button_delete_Click(object sender, EventArgs e)
         {
             if (_bsDolgozok.Current == null) return;
 
             var dolgozo = (Dolgozo)_bsDolgozok.Current;
 
-            var confirm = MessageBox.Show(
+            if (MessageBox.Show(
                 $"Biztosan törlöd: {dolgozo.TeljesNev}?",
                 "Törlés",
                 MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning
-            );
+                MessageBoxIcon.Warning) != DialogResult.Yes)
+                return;
 
-            if (confirm != DialogResult.Yes) return;
-
-            var response = await _httpClient.DeleteAsync(
-                $"{apiUrl}/{dolgozo.Id}"
-            );
-
-            if (response.IsSuccessStatusCode)
+            if (await _api.DeleteAsync(dolgozo.Id))
             {
                 await getAll_from_backend();
                 MessageBox.Show("Dolgozó törölve");
@@ -173,6 +154,7 @@ namespace framework_WindowsFormsApp
                 MessageBox.Show("Hiba történt törléskor");
             }
         }
+
 
         Dolgozo GetDolgozoFromForm()
         {
