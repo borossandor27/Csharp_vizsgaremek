@@ -3,10 +3,10 @@ using System.Configuration;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
-using WpfApp_Framework.Models;
-using WpfApp_Framework.ViewModels;
+using framework_WpfApp.Models;
+using framework_WpfApp.ViewModels;
 
-namespace WpfApp_Framework
+namespace framework_WpfApp
 {
     public partial class MainWindow : Window
     {

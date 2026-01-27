@@ -2,11 +2,11 @@
 //
 // To parse this JSON data, add NuGet 'Newtonsoft.Json' then do:
 //
-//    using async_konzolos_framework47;
+//    using framework_async_konzolos;
 //
 //    var dolgozo = Dolgozo.FromJson(jsonString);
 
-namespace async_konzolos_framework47
+namespace framework_async_konzolos
 {
     using System;
     using System.Collections.Generic;
@@ -45,12 +45,12 @@ namespace async_konzolos_framework47
 
     public partial class Dolgozo
     {
-        public static Dolgozo[] FromJson(string json) => JsonConvert.DeserializeObject<Dolgozo[]>(json, async_konzolos_framework47.Converter.Settings);
+        public static Dolgozo[] FromJson(string json) => JsonConvert.DeserializeObject<Dolgozo[]>(json, framework_async_konzolos.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Dolgozo[] self) => JsonConvert.SerializeObject(self, async_konzolos_framework47.Converter.Settings);
+        public static string ToJson(this Dolgozo[] self) => JsonConvert.SerializeObject(self, framework_async_konzolos.Converter.Settings);
     }
 
     internal static class Converter

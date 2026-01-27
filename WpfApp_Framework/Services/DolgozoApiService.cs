@@ -5,9 +5,9 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using WpfApp_Framework.Models;
+using framework_WpfApp.Models;
 
-namespace WpfApp_Framework.Services
+namespace framework_WpfApp.Services
 {
     public class DolgozoApiService : IDolgozoApiService
     {

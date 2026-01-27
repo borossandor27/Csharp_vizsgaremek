@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace core_DolgozoManagerWPF
+namespace core_WpfApp
 {
     /// <summary>
     /// Interaction logic for App.xaml

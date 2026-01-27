@@ -6,7 +6,7 @@
 //
 //    var dolgozo = Dolgozo.FromJson(jsonString);
 
-namespace WpfApp_Framework.Models
+namespace framework_WpfApp.Models
 {
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
@@ -115,12 +115,12 @@ namespace WpfApp_Framework.Models
 
     public partial class Dolgozo
     {
-        public static Dolgozo[] FromJson(string json) => JsonConvert.DeserializeObject<Dolgozo[]>(json, WpfApp_Framework.Models.Converter.Settings);
+        public static Dolgozo[] FromJson(string json) => JsonConvert.DeserializeObject<Dolgozo[]>(json, framework_WpfApp.Models.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Dolgozo[] self) => JsonConvert.SerializeObject(self, WpfApp_Framework.Models.Converter.Settings);
+        public static string ToJson(this Dolgozo[] self) => JsonConvert.SerializeObject(self, framework_WpfApp.Models.Converter.Settings);
     }
 
     internal static class Converter

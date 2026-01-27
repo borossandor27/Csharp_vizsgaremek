@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 
-namespace core_DolgozoManagerWPF.Models
+namespace core_WpfApp.Models
 {
     public class Dolgozo
     {

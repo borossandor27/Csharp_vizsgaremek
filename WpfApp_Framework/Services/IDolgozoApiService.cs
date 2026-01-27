@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using WpfApp_Framework.Models;
+using framework_WpfApp.Models;
 
-namespace WpfApp_Framework.Services
+namespace framework_WpfApp.Services
 {
     public interface IDolgozoApiService
     {

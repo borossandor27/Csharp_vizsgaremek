@@ -13,12 +13,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
-using core_DolgozoManagerWPF.Models;
-using core_DolgozoManagerWPF.Services;
+using core_WpfApp.Models;
+using core_WpfApp.Services;
 
 
 
-namespace core_DolgozoManagerWPF
+namespace core_WpfApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

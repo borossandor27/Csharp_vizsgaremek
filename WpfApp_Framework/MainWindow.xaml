@@ -1,7 +1,7 @@
-﻿<Window x:Class="WpfApp_Framework.MainWindow"
+﻿<Window x:Class="framework_WpfApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="clr-namespace:WpfApp_Framework.ViewModels"
+        xmlns:vm="clr-namespace:framework_WpfApp.ViewModels"
         Title="Dolgozók"
         Height="450"
         Width="900">

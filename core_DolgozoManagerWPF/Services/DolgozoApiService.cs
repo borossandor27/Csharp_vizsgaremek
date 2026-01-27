@@ -1,56 +1,103 @@
-﻿using core_DolgozoManagerWPF.Models;
-using core_DolgozoManagerWPF.Services;
+﻿using core_WpfApp.Models;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 
-namespace core_DolgozoManagerWPF.Services
+namespace core_WpfApp.Services
 {
     public class DolgozoApiService
     {
-        private static readonly HttpClient _client = new HttpClient();
-        private readonly string _baseUrl;
+        private readonly HttpClient _httpClient;
+        private readonly JsonSerializerOptions _jsonOptions;
 
-        private readonly JsonSerializerOptions _jsonOptions =
-            new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            };
-
-        public DolgozoApiService(string baseUrl)
+        // Konstruktor módosítása: HttpClient-t kap dependency injection-ból
+        public DolgozoApiService(HttpClient httpClient)
         {
-            _baseUrl = baseUrl;
+            _httpClient = httpClient;
+
+            _jsonOptions = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+                PropertyNamingPolicy = JsonNamingPolicy.CamelCase, // Ajánlott
+                WriteIndented = false
+            };
         }
 
         public async Task<List<Dolgozo>> GetAllAsync()
         {
-            var json = await _client.GetStringAsync(_baseUrl);
-            return JsonSerializer.Deserialize<List<Dolgozo>>(json, _jsonOptions)
-                   ?? new List<Dolgozo>();
+            try
+            {
+                var json = await _httpClient.GetStringAsync("");
+                return JsonSerializer.Deserialize<List<Dolgozo>>(json, _jsonOptions)
+                       ?? new List<Dolgozo>();
+            }
+            catch (HttpRequestException ex)
+            {
+                // Logolhatod a hibát
+                throw new Exception($"Hiba az adatok lekérésekor: {ex.Message}", ex);
+            }
         }
 
         public async Task<Dolgozo?> GetByIdAsync(long id)
         {
-            var response = await _client.GetAsync($"{_baseUrl}/{id}");
-            if (!response.IsSuccessStatusCode) return null;
+            try
+            {
+                var response = await _httpClient.GetAsync($"{id}");
+                if (!response.IsSuccessStatusCode) return null;
 
-            var json = await response.Content.ReadAsStringAsync();
-            return JsonSerializer.Deserialize<Dolgozo>(json, _jsonOptions);
+                var json = await response.Content.ReadAsStringAsync();
+                return JsonSerializer.Deserialize<Dolgozo>(json, _jsonOptions);
+            }
+            catch (HttpRequestException ex)
+            {
+                throw new Exception($"Hiba a dolgoző lekérésekor (ID: {id}): {ex.Message}", ex);
+            }
         }
 
         public async Task CreateAsync(Dolgozo dolgozo)
         {
-            var json = JsonSerializer.Serialize(dolgozo);
-            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            try
+            {
+                var json = JsonSerializer.Serialize(dolgozo, _jsonOptions);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var response = await _client.PostAsync(_baseUrl, content);
-            response.EnsureSuccessStatusCode();
+                var response = await _httpClient.PostAsync("", content);
+                response.EnsureSuccessStatusCode();
+            }
+            catch (HttpRequestException ex)
+            {
+                throw new Exception($"Hiba a dolgoző létrehozásakor: {ex.Message}", ex);
+            }
         }
 
         public async Task DeleteAsync(long id)
         {
-            var response = await _client.DeleteAsync($"{_baseUrl}/{id}");
-            response.EnsureSuccessStatusCode();
+            try
+            {
+                var response = await _httpClient.DeleteAsync($"{id}");
+                response.EnsureSuccessStatusCode();
+            }
+            catch (HttpRequestException ex)
+            {
+                throw new Exception($"Hiba a dolgoző törlésekor (ID: {id}): {ex.Message}", ex);
+            }
+        }
+
+        // Opcionális: Update metódus, ha szükséges
+        public async Task UpdateAsync(long id, Dolgozo dolgozo)
+        {
+            try
+            {
+                var json = JsonSerializer.Serialize(dolgozo, _jsonOptions);
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                var response = await _httpClient.PutAsync($"{id}", content);
+                response.EnsureSuccessStatusCode();
+            }
+            catch (HttpRequestException ex)
+            {
+                throw new Exception($"Hiba a dolgoző frissítésekor (ID: {id}): {ex.Message}", ex);
+            }
         }
     }
 }

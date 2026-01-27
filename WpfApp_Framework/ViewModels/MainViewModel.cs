@@ -1,11 +1,11 @@
 ﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows;
-using WpfApp_Framework.Commands;
-using WpfApp_Framework.Models;
-using WpfApp_Framework.Services;
+using framework_WpfApp.Commands;
+using framework_WpfApp.Models;
+using framework_WpfApp.Services;
 
-namespace WpfApp_Framework.ViewModels
+namespace framework_WpfApp.ViewModels
 {
     public class MainViewModel : BaseViewModel
     {

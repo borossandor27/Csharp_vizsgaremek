@@ -7,7 +7,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace async_konzolos_framework47
+namespace framework_async_konzolos
 {
     internal class Program
     {
