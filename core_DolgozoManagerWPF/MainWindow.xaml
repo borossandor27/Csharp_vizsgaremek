@@ -1,0 +1,104 @@
+﻿<Window x:Class="core_DolgozoManagerWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:core_DolgozoManagerWPF"
+        mc:Ignorable="d"
+        Title="Dolgozó Manager" Height="700" Width="1000"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="250"/>
+        </Grid.RowDefinitions>
+
+        <!-- Fejléc -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Dolgozók" FontSize="16" FontWeight="Bold" VerticalAlignment="Center"/>
+            <Button x:Name="btnRefresh" Content="Frissítés" Margin="10,0,0,0" Padding="10,5" 
+                    Click="btnRefresh_Click"/>
+            <TextBlock x:Name="txtStatus" Margin="20,0,0,0" VerticalAlignment="Center" 
+                       Text="Betöltés alatt..."/>
+        </StackPanel>
+
+        <!-- Dolgozók listája -->
+        <DataGrid x:Name="dgDolgozok" Grid.Row="1" Margin="10,0,10,10" AutoGenerateColumns="False"
+                  SelectionMode="Single" IsReadOnly="True" SelectionChanged="dgDolgozok_SelectionChanged">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Név" Binding="{Binding Teljes_nev}" Width="150"/>
+                <DataGridTextColumn Header="Beosztás" Binding="{Binding Beosztas}" Width="120"/>
+                <DataGridTextColumn Header="Belépés" Binding="{Binding BelepesFormazott}" Width="100"/>
+                <DataGridTextColumn Header="Kilépés" Binding="{Binding KilepesFormazott}" Width="100"/>
+                <DataGridTextColumn Header="Fizetés" Binding="{Binding Fizetes, StringFormat=N0}" Width="100"/>
+                <DataGridCheckBoxColumn Header="Aktív" Binding="{Binding Aktiv}" Width="60"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Műveletek -->
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+            <Button x:Name="btnNew" Content="Új dolgozó" Padding="15,5" Margin="0,0,10,0" 
+                    Click="btnNew_Click"/>
+            <Button x:Name="btnDelete" Content="Törlés" Padding="15,5" Margin="0,0,10,0" 
+                    Click="btnDelete_Click" Background="#FFE74C3C" Foreground="White"/>
+            <Button x:Name="btnClear" Content="Törlés" Padding="15,5" 
+                    Click="btnClear_Click"/>
+        </StackPanel>
+
+        <!-- Dolgozó szerkesztése -->
+        <GroupBox Grid.Row="3" Header="Dolgozó adatai" Margin="10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- ID -->
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="ID:" Margin="5" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtId" Grid.Row="0" Grid.Column="1" Margin="5" IsReadOnly="True"/>
+
+                <!-- Név -->
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Teljes név:" Margin="5" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtTeljesNev" Grid.Row="1" Grid.Column="1" Margin="5"/>
+
+                <!-- Beosztás -->
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Beosztás:" Margin="5" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtBeosztas" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+                <!-- Fizetés -->
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Fizetés:" Margin="5" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtFizetes" Grid.Row="3" Grid.Column="1" Margin="5" PreviewTextInput="txtFizetes_PreviewTextInput"/>
+
+                <!-- Belépés -->
+                <TextBlock Grid.Row="0" Grid.Column="2" Text="Belépés:" Margin="5" VerticalAlignment="Center"/>
+                <DatePicker x:Name="dpBelepes" Grid.Row="0" Grid.Column="3" Margin="5"/>
+
+                <!-- Aktív -->
+                <CheckBox x:Name="chkAktiv" Grid.Row="1" Grid.Column="2" Content="Aktív" 
+                          Margin="5" VerticalAlignment="Center"/>
+
+                <!-- Kilépés -->
+                <TextBlock Grid.Row="2" Grid.Column="2" Text="Kilépés:" Margin="5" VerticalAlignment="Center"/>
+                <DatePicker x:Name="dpKilepes" Grid.Row="2" Grid.Column="3" Margin="5"/>
+
+                <!-- Menti gomb -->
+                <Button x:Name="btnSave" Grid.Row="5" Grid.Column="3" Content="Mentés" 
+                        HorizontalAlignment="Right" Width="100" Height="30" Margin="5"
+                        Click="btnSave_Click"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

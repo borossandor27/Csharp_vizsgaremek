@@ -1,6 +1,9 @@
 # REST API használata C#-ban
 
-Választhatsz `.NET Framework` és `.NET` között. A `.NET Framework` fejlesztése leállt és csak MS Windows alatt működőképes, de egy ügyviteli alkalmazáshoz még most is kiválóan megfelel.
+A több mint 20 éve folyamatosan fejlődő nyelv több lehetőséget kínál. Választhatsz `.NET Framework` és `.NET` között, 
+valamint `WinForm` és `WPF` között. A `.NET Framework` fejlesztése leállt és 
+csak MS Windows alatt működőképes, de egy ügyviteli alkalmazáshoz még most is 
+kiválóan megfelel. A WPF grafikai szolgltatásai sokkal jobbal a WinForm-hoz képest
  Más alkalmazásoknál egyértelműen a `.NET` az ajánlott. 
  
 ## JSON-ből C# object

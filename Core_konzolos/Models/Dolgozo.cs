@@ -1,9 +1,9 @@
 ﻿
-    using System;
-    using System.Collections.Generic;
+using System;
+using System.Collections.Generic; // Gyűjtemények kezeléséhez
 
-    using System.Globalization;
-    using System.Text.Json;
+using System.Globalization; // Nemzeti információk kezeléséhez
+using System.Text.Json;
 
 
 public class Dolgozo
@@ -32,18 +32,18 @@ public class Dolgozo
         }
     }
     public string Beosztas { get; set; } = "";
-    public string TeljesNev { get; set; } = "";
+    public string Teljes_nev { get; set; } = "";
 
     public override string ToString()
     {
         return
             $"ID: {Id}\n" +
-            $"Név: {TeljesNev}\n" +
-            $"Beosztás: {Beosztas}\n" +
-            $"Belépés: {Belepes}\n" +
-            $"Kilépés: {Kilepes ?? "N/A"}\n" +
-            $"Fizetés: {Fizetes}\n" +
-            $"Aktív: {Aktiv}\n";
+            $"\tNév: {Teljes_nev}\n" +
+            $"\tBeosztás: {Beosztas}\n" +
+            $"\tBelépés: {Belepes}\n" +
+            $"\tKilépés: {Kilepes ?? "N/A"}\n" +
+            $"\tFizetés: {Fizetes}\n" +
+            $"\tAktív: {Aktiv}\n";
     }
 }
 

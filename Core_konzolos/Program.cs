@@ -20,7 +20,7 @@ var ujDolgozo = new Dolgozo
     Belepes = "2024-01-15",
     Fizetes = 550000,
     Beosztas = "Fejlesztő",
-    TeljesNev = "Kovács János"
+    Teljes_nev = "Kovács János"
 };
 
 // await service.CreateAsync(ujDolgozo);
