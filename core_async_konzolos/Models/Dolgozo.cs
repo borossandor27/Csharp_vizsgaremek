@@ -5,6 +5,7 @@ using System.Collections.Generic; // Gyűjtemények kezeléséhez
 using System.Globalization; // Nemzeti információk kezeléséhez
 using System.Text.Json;
 
+namespace Core_konzolos.Models;
 
 public class Dolgozo
 {

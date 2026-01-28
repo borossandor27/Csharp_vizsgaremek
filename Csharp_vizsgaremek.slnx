@@ -1,13 +1,15 @@
 <Solution>
   <Folder Name="/Solution Items/">
     <File Path="backend_base.url" />
+    <File Path="dolgozok.csv" />
+    <File Path="dolgozok.json" />
     <File Path="random_image.url" />
     <File Path="README.md" />
   </Folder>
-  <Project Path="async_konzolos/framework_async_konzolos.csproj" Id="058c92bf-4883-4fb9-a118-77cdaeae96b7" />
-  <Project Path="core_DolgozoManagerWPF/core_WpfApp.csproj" Id="88c51d14-218f-425b-8366-1d9105c8e0c1" />
-  <Project Path="core_konzolos/core_konzolos.csproj" Id="a8fac05d-a51d-4279-b08c-a764bb05ef77" />
+  <Project Path="core_async_konzolos/core_konzolos.csproj" />
   <Project Path="core_WinFormsApp/core_WinFormsApp.csproj" Id="61b35c6e-d172-42bd-9dc4-d4d08ba64902" />
-  <Project Path="framework_WindowsFormsApp/framework_WinFormsApp.csproj" Id="6b2a2452-1cf4-4e24-9b93-d5ece39582ab" />
-  <Project Path="WpfApp_Framework/framework_WpfApp.csproj" Id="07e7b2b2-85ee-41c9-9d9d-2a081744b910" />
+  <Project Path="core_WPFApp/core_WpfApp.csproj" />
+  <Project Path="framework_async_konzolos/framework_async_konzolos.csproj" Id="5c201722-db1c-43a1-8deb-005983b6aa11" />
+  <Project Path="framework_WinFormsApp/framework_WinFormsApp.csproj" Id="6b2a2452-1cf4-4e24-9b93-d5ece39582ab" />
+  <Project Path="framework_WpfApp/framework_WpfApp.csproj" Id="07e7b2b2-85ee-41c9-9d9d-2a081744b910" />
 </Solution>
